@@ -15,7 +15,7 @@ jobs:
           command: |
             chmod +x ops/*sh && . /etc/profile.d/pyenv-path.sh
             ops/env.sh ${SOMEVAR}
-            env
+            echo $KUBECONFIG
 #      - run:
 #          name: Build Docker Container with FlaskApp
 #          command: |
