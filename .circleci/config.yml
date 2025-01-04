@@ -15,11 +15,12 @@ jobs:
           command: |
             chmod +x ops/*sh && . /etc/profile.d/pyenv-path.sh
             ops/env.sh ${SOMEVAR}
+            kubectl get nodes
       - run:
           name: deploy Hashicorp Vault
           command: |
-            kubectl get nodes
-            helm version
+            helm repo add hashicorp https://helm.releases.hashicorp.com
+
 #            sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
 
 workflows:
