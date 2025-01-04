@@ -15,7 +15,7 @@ jobs:
           command: |
             chmod +x ops/*sh && . /etc/profile.d/pyenv-path.sh
             ops/env.sh ${SOMEVAR}
-            kubectl get nodes
+            env
 #      - run:
 #          name: Build Docker Container with FlaskApp
 #          command: |
