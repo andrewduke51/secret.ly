@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: build env and make local_files directory
+          name: build env set access
           environment:
             - SOMEVAR: placeholder
           command: |
@@ -28,4 +28,7 @@ workflows:
   version: 2.1
   init_and_deploy:
     jobs:
-      - deployment
+      - deployment:
+          context:
+            - deployment-an
+
