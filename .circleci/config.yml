@@ -19,10 +19,8 @@ jobs:
           name: deploy Hashicorp Vault
           command: |
             kubectl get nodes
-            sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
-#            cd flask-app
-#            sudo docker build -t andrewduke51/app:latest .
-#            sudo docker push andrewduke51/app:latest
+            helm version
+#            sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
 
 workflows:
   version: 2.1
