@@ -15,11 +15,11 @@ jobs:
           command: |
             chmod +x ops/*sh && . /etc/profile.d/pyenv-path.sh
             ops/env.sh ${SOMEVAR}
-            ls -all  ${CIRCLE_WORKING_DIRECTORY}/ops/
-#      - run:
-#          name: Build Docker Container with FlaskApp
-#          command: |
-#            sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run:
+          name: Build Docker Container with FlaskApp
+          command: |
+            sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
+            env
 #            cd flask-app
 #            sudo docker build -t andrewduke51/app:latest .
 #            sudo docker push andrewduke51/app:latest
